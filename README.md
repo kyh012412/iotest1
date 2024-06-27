@@ -50,4 +50,8 @@ basename을 사용해본다. 정도로 고려됨
 [참조 링크](https://velog.io/@wlwl99/GitHub-Pages-%EB%B0%B0%ED%8F%AC%ED%95%98%EB%8A%94-%EB%B2%95)이 링크를 보면은 BrowserRouter대신에
 HashRouter를 쓰는 것을권장한다고 되어있고
 
-try hashrouter + basename = '/iotest1'
+case 1 : try hashrouter + basename = '/iotest1' -> 로컬에서도 배포쪽에서 출력이 아무것도 되지 않았다..
+문서를 봐도 Hashrouter는 절대경로가 필요한것이 아니라면 권장하지 않는다고 나와있다.
+
+case 2 : try browserRotuer + base name = '/iotest1' 로컬쪽에서 모든 경로가 /iotest1이 됨을 확인 할 수 잇었고
+내용도 정상적으로출력이 되고 있다 이 버전을 배포해본다면
