@@ -268,3 +268,5 @@ index.html
 ```
 
 그리고 혹시 몰라서 직접만든 notfound 컴포넌트감지는 제외했다.
+
+[참조링크가 많은 링크](https://velog.io/@jknine929/Github-Pages%EC%97%90-%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0)
