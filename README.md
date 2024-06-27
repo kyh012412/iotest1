@@ -54,4 +54,32 @@ case 1 : try hashrouter + basename = '/iotest1' -> 로컬에서도 배포쪽에�
 문서를 봐도 Hashrouter는 절대경로가 필요한것이 아니라면 권장하지 않는다고 나와있다.
 
 case 2 : try browserRotuer + base name = '/iotest1' 로컬쪽에서 모든 경로가 /iotest1이 됨을 확인 할 수 잇었고
-내용도 정상적으로출력이 되고 있다 이 버전을 배포해본다면
+내용도 정상적으로출력이 되고 있다 이 버전을 배포해본다면  
+배포에서도 모든 경로와 내용이 정상적이다. 다만,  
+kyh012412.github.io/iotest1/path1을 수동으로 입력후엔터를 할시에 원하는 페이지에 도달하지 못하기에
+검색을 햇고 그결과 404.html을 public 폴더에 넣으라고 되어있었다.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="stylesheet" href="%PUBLIC_URL%/index.css" />
+    <script defer src="%PUBLIC_URL%/index.js"></script>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>
+```
+
+case 3: try with 404.html
+특이사항 gpt친구는 홈페이지를 /iotest1로 하라고했지만 현재는 기존경로에따라서
+`"homepage": "https://kyh012412.github.io/iotest1/"`로 되어있다
