@@ -5,17 +5,14 @@ const NotFound = () => {
   const params = useParams();
   const setUpString = () => {
     if (!params) return;
-    Object.keys(params);
+    Object.keys(params).forEach((key) => {
+      outputString += `${key} : ${params[key]}\n`;
+    });
   };
-  const outputString = '';
+  let outputString = '';
 
   useEffect(() => {
-    const setUpString = () => {
-      if (!params) return;
-      Object.keys(params).map((key) => {
-        outputString += `${key} : ${params[key]}\n`;
-      });
-    };
+    setUpString();
   }, [params]);
 
   return <div>{outputString}</div>;

@@ -29,3 +29,25 @@ github.io에서의 기본적인 정적페이지 제공까지는 동일한 것으
 
 Link 태그를 추가하여 basename까지 고려하여 원하는 곳으로 접근이 가능하여야한다.  
 `npm i react-router-dom`
+
+## 기록
+
+homepage가 https://kyh012412.github.io/iotest1/일때
+
+최초 접속링크 https://kyh012412.github.io/iotest1/
+path1로 갔을때 url에 보이는 링크
+https://kyh012412.github.io/path1
+이때 보이는 내용 path1 과 동일 (정상출력)
+개발자 도구상 href 에 적혀잇는 주소 /path1
+
+## 해결계획 2가지 계획
+
+.env로 빌드할때부터 앞에 이름을 붙여준다 또는
+basename을 사용해본다. 정도로 고려됨
+
+### 해결검색
+
+[참조 링크](https://velog.io/@wlwl99/GitHub-Pages-%EB%B0%B0%ED%8F%AC%ED%95%98%EB%8A%94-%EB%B2%95)이 링크를 보면은 BrowserRouter대신에
+HashRouter를 쓰는 것을권장한다고 되어있고
+
+try hashrouter + basename = '/iotest1'
