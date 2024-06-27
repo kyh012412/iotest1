@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# github.io 테스트 리액트 라우터 테스트
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+repository name : iotest1
 
-## Available Scripts
+현재 예상되는 루트 경로 kyh012412.github.io/iotest1  
+이하의 경로를 react의 Link 태그로 연결햇을시 정상적인 /iotest1/newlink 화면이 보여야하며
+url에 kyh012412.github.io/iotest1/newlink을 적어도 동일한 화면이 출력되기를 기대
 
-In the project directory, you can run:
+## 빠른 배포
 
-### `npm start`
+`npm install gh-pages --save-dev`  
+`npm i gh-pages` 로 설치  
+`package.json`에는 `"deploy": "npm run build && gh-pages -d build"`를 추가하여 준다.  
+그 이후 빠른 배포를 하기위해서는 `npm run deploy`를 치면 된다.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 필수 연결
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+`npm run deploy`를 한번 실행시켜주면 gh-pages 라는 이름의 브랜치가 생기는데
+`https://github.com/${유저명}/${레포지토리명}/settings/pages` 으로가서
+branch를 gh-pages로 변경해준다.
 
-### `npm test`
+## 추정
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+react이지만 빌드이후 후의 생기는 모든 과정을 동일하게 처리한다면
+github.io에서의 기본적인 정적페이지 제공까지는 동일한 것으로 보인다.
+`package.json`에 homepage라는 키를 추가해주고 값은 `${username}.github.io/${repositoryName}`으로 해주어야 하는것으로 보인다.
 
-### `npm run build`
+### 추정 이후의 실험계획
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Link 태그를 추가하여 basename까지 고려하여 원하는 곳으로 접근이 가능하여야한다.  
+`npm i react-router-dom`
