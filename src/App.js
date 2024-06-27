@@ -14,7 +14,6 @@ function App() {
         <Route path="path1" element={<>path1</>}></Route>
         <Route path="path2" element={<>path2</>}></Route>
         <Route path="path3" element={<>path3</>}></Route>
-        <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Links />
     </div>
